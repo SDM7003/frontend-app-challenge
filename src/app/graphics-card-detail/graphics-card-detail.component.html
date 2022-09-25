@@ -1,0 +1,30 @@
+<title>{{card.name}}</title>
+<div class="container-one">
+  <button type="button" (click)="backToMain()" class="btn btn-back">< Back to Main Page</button>
+  <h1>{{card.name}}</h1>
+</div>
+<div class="container">
+  <div class="container-flex">
+    <div class="col-6">
+      <img width="100%" src="{{card.photo}}">
+      <h3 style="margin-bottom: 10px">Technical Information</h3>
+      <div style="color: gray" class="container-flex">
+        <div class="col-6">
+          <li style="margin-bottom: 10px"><b>Bus Standard: </b>{{card.info1}}</li>
+          <li style="margin-bottom: 10px"><b>OpenGL: </b>{{card.info2}}</li>
+        </div>
+        <div class="col-6">
+          <li style="margin-bottom: 10px"><b>Video Memory: </b>{{card.info3}}</li>
+          <li style="margin-bottom: 10px"><b>Manifactura: </b>{{card.info4}}</li>
+        </div>
+      </div>
+      <p class="text-justify">{{card.full_desc}}</p>
+    </div>
+    <div class="col-6">
+      <div class="card">
+        <h4>In Stock</h4>
+        <h2>{{card.price}}$</h2>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.container{
+  height: 80vh;
+  overflow: scroll;
+}
+h1{
+  font-weight: 400;
+}
+.btn.btn-back{
+  background-color: aqua;
+}
+.card{
+  text-align: center;
+  margin: 0;
+}
+.card h4{
+  margin: 0;
+}
+@media (min-width: 1400px) {
+  .card{
+    width: 30%;
+  }
+}

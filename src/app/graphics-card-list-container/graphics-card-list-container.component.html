@@ -1,0 +1,27 @@
+<title>Graphics Card List</title>
+<div class="container">
+  <div class="container-flex">
+    <div class="col-6">
+      <h2>Graphics Card List</h2>
+    </div>
+    <div class="col-6">
+      <input type="text" class="cardFilter" (keyup)="textFilter($any($event.target).value)" placeholder="Search graphics card...">
+    </div>
+  </div>
+  <div class="items">
+    <div class="container-flex">
+      <div *ngFor="let item of graphicCardItems$ | async" class="card">
+        <div class="cardBody">
+          <img class="cardImg" src="{{item.photo}}">
+          <h3 class="text-center">{{item.name}}</h3>
+          <p class="text-justify">{{item.small_desc}}</p>
+          <div class="cardFooter">
+            <h2 class="text-end">{{item.price}}$</h2>
+            <button (click)="goToDetail(item.id)" class="btn viewMore">View More Info</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+</div>

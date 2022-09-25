@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+  overflow: hidden;
+}
+.text-start{
+  text-align: start;
+}
+.text-end{
+  text-align: end;
+}
+.text-center{
+  text-align: center;
+}
+.text-justify{
+  text-align: justify;
+}
+
+.container-one,
+.container{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card{
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+.cardBody{
+  position: relative;
+}
+.col-6{
+  margin: 10px;
+}
+.cardImg{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+h2{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.btn{
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.btn.viewMore{
+  width: 100%;
+  background-color: green;
+  color: white;
+}
+.items{
+  max-height: 90vh;
+  overflow: scroll;
+}
+.cardFilter{
+  width: 100%;
+  height: 10px;
+  padding: 10px;
+}
+
+@media (min-width: 1400px) {
+  .container-one,
+  .container{
+    max-width: 1320px;
+  }
+  .card{
+    flex: 1 0 21%; /* explanation below */
+  }
+  .col-6{
+    flex: 1 0 21%;
+  }
+}
